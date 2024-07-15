@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="wireServiceDemo" icon-name="custom:custom14">
+    <div class="slds-var-m-around_medium">
+        <template if:true={contactData}>
+            <template for:each={contactData} for:item="contact">
+                <p key={contact.Id}>{contact.Name}</p>
+            </template>
+        </template>
+        <template if:true={error}>
+            <p>Contact Data not available</p>
+        </template>
+    </div>
+    </lightning-card>
+</template>

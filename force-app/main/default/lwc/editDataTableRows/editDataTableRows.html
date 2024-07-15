@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="in-line editing enable databale">
+        <c-custom-data-type
+            key-field="Id"
+            columns={columns}
+            data={contacts}
+            onsave={saveHandler}
+            draft-values={draftValues}
+            onrowaction={rowActionHandler}>
+        </c-custom-data-type>
+    </lightning-card>
+    <template lwc:if={showModal}>
+        <c-custom-modal-for-data-table 
+            is-display-mode={viewMode} 
+            is-edit-mode={editMode} 
+            record-input-id={selectedRecordId}
+            onclosemodal={closeModal}>
+        </c-custom-modal-for-data-table>
+    </template>
+</template>

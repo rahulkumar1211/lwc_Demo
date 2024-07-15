@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="conditional rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="checkbox" label='Show Passowrd' onclick={handleClick}></lightning-input>
+        </div>
+        <div class="slds-var-around_medium userinfo">
+            <template if:true={isVisible}>
+                Password is: Rahul1211kumar
+            </template>
+            <template if:false={isVisible}>
+                Password is: *************
+            </template>
+        </div>
+    </lightning-card>
+</template>
